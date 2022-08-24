@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
-import { CardPeopleComponent } from './components/card-people/card-people.component';
 import { AddPeopleComponent } from './components/add-people/add-people.component';
 import { ListPeoplesComponent } from './components/list-peoples/list-peoples.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +24,6 @@ import { EditContactFormComponent } from './components/edit-contact-form/edit-co
     AppComponent,
     HeaderComponent,
     AddButtonComponent,
-    CardPeopleComponent,
     AddPeopleComponent,
     ListPeoplesComponent,
     PeopleFormComponent,

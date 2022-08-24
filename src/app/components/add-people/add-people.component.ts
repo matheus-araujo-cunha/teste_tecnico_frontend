@@ -18,8 +18,6 @@ export class AddPeopleComponent implements OnInit {
       height: '50vh',
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 }
