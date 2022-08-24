@@ -1,0 +1,13 @@
+.section__fields__form {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    gap:25%;
+}
+
+.section__buttons__form{
+    width:inherit;
+    display:flex;
+    justify-content:end;
+    gap:5%;
+}

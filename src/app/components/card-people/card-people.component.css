@@ -1,0 +1,16 @@
+.card__people {
+    width:80vw;
+    height:12vh;
+    gap:10px;
+    padding: 3px 12px;
+    border:3px solid #231955;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    align-items:start;
+    justify-content:center;
+    background-color:#E8AA42;
+    color:#231955;
+    font-weight:500;
+
+}

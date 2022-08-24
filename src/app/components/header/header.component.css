@@ -1,12 +1,11 @@
 
 header {
-    width:100%;
+    width:100vw;
     height:10vh;
     display:flex;
     justify-content:space-around;
     align-items:center;
     gap:30%;
-
     background-color:#E8AA42;
     color:#231955;
     font-weight:500;
