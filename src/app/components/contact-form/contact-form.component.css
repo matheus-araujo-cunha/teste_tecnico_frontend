@@ -1,0 +1,19 @@
+.section__fields__form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:25%;
+
+    align-items:center;
+}
+
+.mat-form-field{
+    width:100%;
+}
+
+.section__buttons__form{
+    width:inherit;
+    display:flex;
+    justify-content:end;
+    gap:5%;
+}

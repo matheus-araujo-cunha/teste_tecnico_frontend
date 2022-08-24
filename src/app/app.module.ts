@@ -14,7 +14,12 @@ import { PeopleFormComponent } from './components/people-form/people-form.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { DetailPeopleComponent } from './components/detail-people/detail-people.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { MatIconModule } from '@angular/material/icon';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { MatSelectModule } from '@angular/material/select';
+import { EditContactFormComponent } from './components/edit-contact-form/edit-contact-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +29,10 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     AddPeopleComponent,
     ListPeoplesComponent,
     PeopleFormComponent,
-    AddContactComponent,
+    DetailPeopleComponent,
+    MainContentComponent,
+    ContactFormComponent,
+    EditContactFormComponent,
   ],
   imports: [
     HttpClientModule,
@@ -35,6 +43,8 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     FormsModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

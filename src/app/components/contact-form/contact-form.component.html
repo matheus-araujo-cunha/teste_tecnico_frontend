@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>New Contact </h1>
+<div mat-dialog-content>
+    <form class="contact__form" [formGroup]="contactForm">
+        <section class="section__fields__form">
+            <mat-form-field appearance="outline">
+                <mat-label>Contact</mat-label>
+                <mat-select formControlName="contact" name="contact" required>
+                  <mat-option *ngFor="let contact of contacts" [value]="contact">
+                    {{contact}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+    
+              <mat-form-field appearance="outline">
+                <mat-label>Info</mat-label>
+                <input matInput formControlName="info" name="info">
+              </mat-form-field>
+        </section>
+
+        <section class="section__buttons__form">
+            <button mat-raised-button color="primary" >
+               Add </button>
+            <button mat-raised-button  color="primary" (click)="closeForm()">Cancel</button>
+        </section>
+       
+    </form>
+</div>

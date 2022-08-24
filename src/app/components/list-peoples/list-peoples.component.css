@@ -1,6 +1,7 @@
 section {
-    width:90%;
+    width:inherit;
     margin-top:6vh;
+    margin-left:8vh;
 }
 
 section h2 {
@@ -9,7 +10,7 @@ section h2 {
 }
 
 .list__card__people{
-    width:88%;
+    width:inherit;
     margin: 0 auto;
     min-height:20vh;
     margin-top:3vh;
