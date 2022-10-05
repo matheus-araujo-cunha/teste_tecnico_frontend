@@ -28,4 +28,8 @@ export class PeopleService {
       this.httpOptions
     );
   }
+
+  public deletePeople(id: string): Observable<void> {
+    return this.httpClient.delete<void>(`${this.apiUrl}people/${id}/`);
+  }
 }

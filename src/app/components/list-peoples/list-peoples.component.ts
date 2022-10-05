@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { People } from 'src/app/shared/models/people.model';
-import { PeopleService } from 'src/app/shared/service/people.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { People } from 'src/app/models/people.model';
+import { PeopleService } from 'src/app/services/people.service';
+import { Store } from '@ngrx/store';
+
+import { ContactService } from 'src/app/services/contact.service';
+import { Contact } from 'src/app/models/contact.model';
+import { IDetail } from 'src/app/models/detail.model';
 
 @Component({
   selector: 'app-list-peoples',
@@ -10,16 +15,28 @@ import { PeopleService } from 'src/app/shared/service/people.service';
 export class ListPeoplesComponent implements OnInit {
   peoples!: People[];
 
-  constructor(public peopleService: PeopleService) {}
+  constructor(
+    public peopleService: PeopleService,
+    private contactService: ContactService
+  ) {}
+
+  @Input() peopleDetail!: IDetail;
+
+  @Input() contactsOfPeople!: Contact[];
 
   ngOnInit(): void {
     this.getPeoples();
   }
 
+  getUniquePeople(people: Partial<People>) {
+    this.peopleDetail.open = !this.peopleDetail.open;
+    this.peopleDetail.contacts = people.contacts;
+    this.peopleDetail.firstName = people.firstName;
+    this.peopleDetail.lastName = people.lastName;
+    this.peopleDetail.id = people.id;
+  }
+
   getPeoples() {
-    this.peopleService.getPeoples().subscribe((data) => {
-      this.peoples = data;
-      console.log(this.peoples[0]);
-    });
+    this.peopleService.getPeoples().subscribe((data) => (this.peoples = data));
   }
 }

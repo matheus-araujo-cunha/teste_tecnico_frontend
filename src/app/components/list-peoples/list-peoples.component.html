@@ -1,9 +1,11 @@
 <section>
     <h2>List of people</h2>
     <ul class="list__card__people" >
-        <section class="card__people" *ngFor="let people of peoples">
-            <h3>{{ people.firstName}} {{people.lastName}}</h3>
+        <section class="card__people" *ngFor="let people of peoples" (click)="getUniquePeople(people)">
+            <h3>{{ people.firstName.toUpperCase()}} {{people.lastName.toUpperCase()}}</h3>
             <h4>Contacts: {{people.contacts.length}}</h4>
+            
         </section >
+
     </ul>
 </section>

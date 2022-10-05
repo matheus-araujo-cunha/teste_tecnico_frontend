@@ -1,26 +1,17 @@
 <h2 class="title__section">Details</h2>
 <section class="section__detail__people">
     <div>
-        <h2>Matheus Araújo</h2>
-        <button mat-raised-button color="accent" (click)="addContact()">Add Contact</button>
+        <h2>{{peopleDetail.firstName?.toUpperCase()}} {{peopleDetail.lastName?.toUpperCase()}}</h2>
+        <button mat-raised-button color="accent" (click)="deletePeople()"><mat-icon>delete</mat-icon></button>
     </div>
 
     <h3>Contacts</h3>
+   
 
     <ul>
-        <li class="card__contact">
-            <h3>Email</h3>
-            <h4>math@mail.com</h4>
-            <button mat-mini-fab color="accent">   <mat-icon>edit</mat-icon> </button>
-        </li>
-        <li class="card__contact">
-            <h3>Email</h3>
-            <h4>math@mail.com</h4>
-            <button mat-mini-fab color="accent">   <mat-icon>edit</mat-icon> </button>
-        </li>
-        <li class="card__contact">
-            <h3>Email</h3>
-            <h4>math@mail.com</h4>
+        <li class="card__contact" *ngFor="let contact of peopleDetail.contacts" (click)="deleteContact(contact.id)">
+            <h3>{{contact.contact}}</h3>
+            <h4>{{contact.info}}</h4>
             <button mat-mini-fab color="accent">   <mat-icon>edit</mat-icon> </button>
         </li>
     </ul>

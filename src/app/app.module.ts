@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { MatSelectModule } from '@angular/material/select';
 import { EditContactFormComponent } from './components/edit-contact-form/edit-contact-form.component';
+import { StoreModule } from '@ngrx/store';
 @NgModule({
   declarations: [
     AppComponent,

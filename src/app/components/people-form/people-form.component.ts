@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { People } from 'src/app/shared/models/people.model';
-import { PeopleService } from 'src/app/shared/service/people.service';
+import { People } from 'src/app/models/people.model';
+import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
   selector: 'app-people-form',
@@ -30,8 +30,10 @@ export class PeopleFormComponent implements OnInit {
     this.peopleService
       .postPeople(this.peopleForm.value)
       .subscribe((result) => {});
-    this.closeForm();
+
     window.location.reload();
+
+    this.closeForm();
   }
 
   closeForm(): void {

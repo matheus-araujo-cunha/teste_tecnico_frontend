@@ -1,4 +1,5 @@
 <main >
-    <app-list-peoples></app-list-peoples>
-    <app-detail-people></app-detail-people>
+    <app-list-peoples [peopleDetail]="detail" [contactsOfPeople]="contacts"></app-list-peoples>
+    <app-detail-people *ngIf="detail.open" [peopleDetail]="detail"></app-detail-people>
+  
 </main>

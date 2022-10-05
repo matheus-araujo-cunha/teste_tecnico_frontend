@@ -36,5 +36,11 @@ section h2 {
     background-color:#E8AA42;
     color:#231955;
     font-weight:600;
+    cursor:pointer;
+    
+}
 
+.card__people:hover{
+    background-color: #231955;
+    color:#E8AA42;
 }
